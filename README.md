@@ -1,5 +1,5 @@
-#Bachelor Thesis:
-Exploring Automated Machine Learning and Deep Learning for Well-being Prediction Using Harmonized Open-Source Datasets
+****Bachelor Thesis:****
+****Exploring Automated Machine Learning and Deep Learning for Well-being Prediction Using Harmonized Open-Source Datasets.****
 
 1. Project Overview
 
