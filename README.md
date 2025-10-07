@@ -9,6 +9,7 @@ The work aims to predict individual well-being levels based on electrodermal act
 
 The system is organized into distinct modules for data aggregation, preprocessing, feature extraction, model training, and evaluation.
 All scripts are written in Python and designed to enable reproducibility of the experimental results presented in the thesis.
+
 2. The workflow operates as follows:
 
 Features are generated using the NeuroKit2 toolbox within the agg_data_prepare stage.
