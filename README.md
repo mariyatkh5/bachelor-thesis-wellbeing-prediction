@@ -1,6 +1,5 @@
-# bachelor-thesis-wellbeing-prediction
+#Bachelor Thesis: Exploring Automated Machine Learning and Deep Learning for Well-being Prediction Using Harmonized Open-Source Datasets
 
-#Exploring Automated Machine Learning and Deep Learning for Well-being Prediction Using Harmonized Open-Source Datasets
 1. Project Overview
 
 This repository contains the full implementation developed for the bachelor thesis
