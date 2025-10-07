@@ -1,4 +1,6 @@
 # bachelor-thesis-wellbeing-prediction
+
+#Exploring Automated Machine Learning and Deep Learning for Well-being Prediction Using Harmonized Open-Source Datasets
 1. Project Overview
 
 This repository contains the full implementation developed for the bachelor thesis
@@ -7,6 +9,17 @@ The work aims to predict individual well-being levels based on electrodermal act
 
 The system is organized into distinct modules for data aggregation, preprocessing, feature extraction, model training, and evaluation.
 All scripts are written in Python and designed to enable reproducibility of the experimental results presented in the thesis.
+2. The workflow operates as follows:
+
+Features are generated using the NeuroKit2 toolbox within the agg_data_prepare stage.
+
+The resulting feature tables are loaded into the AutoML pipeline.
+
+The system explores preprocessing operators, feature transformations, and a range of learners (e.g., logistic regression, SVM, random forest, XGBoost).
+
+Evaluation is performed using stratified five-fold cross-validation and, where applicable, leave-one-subject-out validation.
+
+Performance metrics including Accuracy, F1-score, ROC-AUC, and Precision are saved under the results/ directory.
 
 
 3. Processing Pipeline
