@@ -13,13 +13,11 @@ from utils import extract_scalar_features
 
 warnings.filterwarnings("ignore")
 
-# ---------------------------------- Pfade ----------------------------------
 
 base_dir = os.path.join(const.BASE_DIR, "dataset2_RobotBehaviour", "Measurements_fixed")
 output_folder = os.path.join(const.OUTPUT_DIR, "dataset2")
 os.makedirs(output_folder, exist_ok=True)
 
-# Nominale Raten dienen nur als Fallback, falls keine TimeStamp-Spalte vorhanden ist.
 SIGNALS = {
     "EDA": {"sampling_rate": 4, "ext": "EDA", "method": "eda"},
     "ECG": {"sampling_rate": 130, "ext": "ECG", "method": "ecg"},
@@ -30,19 +28,7 @@ participants = range(1, 26)
 speeds = [1, 2]
 robots = [1, 2, 3]
 
-# ---------------------------------- 72s: Spalten entfernen ----------------------------------
-# HRV-Features, die bei 72 s unzuverlässig sind (nur für ECG entfernen)
-ECG_DROP_72S = [
-    # Langzeit-Zeitbereich
 
-]
-
-# EDA-Features, die bei 72 s besser weggelassen werden
-EDA_DROP_72S = [
- 
-]
-
-# ------------------------------- Hilfsfunktionen ----------------------------
 
 def _to_float(x):
     """Konvertiert Strings mit deutschem Komma zu float, leere zu NaN."""
@@ -135,7 +121,6 @@ def _make_time_based_windows(times, interval_sec, step_sec):
 
     return windows
 
-# ----------------------------- Hauptverarbeitung ----------------------------
 
 def process_signal(signal_name, config):
     results = []
@@ -298,7 +283,6 @@ def process_signal(signal_name, config):
 
     return pd.DataFrame(results)
 
-# ----------------------------------- Run -----------------------------------
 
 if __name__ == "__main__":
     for signal_name, config in SIGNALS.items():
